@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Teachers Record</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h3><a href="/teachers">Edit Teacher Data</a></h3>
+        <h1>Edit Teacher Record</h1>
+        <form action="/teachers/update/<%= teacher._id %>" method="post">Update data
+        <table>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" value="<%= teacher.name %>"/></td>
+                </tr>
+                <tr>
+                    <td>Department</td>
+                    <td><input type="text" name="department" value="<%= teacher.department %>"/></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" value="<%= teacher.email %>"/></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><textarea name="address"><%= teacher.address %></textarea></td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td><input type="number" name="phoneno" value="<%= teacher.phoneno %>"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <button type="submit"> Update Data</button></td>
+                </tr>
+            </tbody>
+        </table>
+        </form>
+    </div>
+</body>
+</html>

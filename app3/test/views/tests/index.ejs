@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create data</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><a href="/tests/create"create record></a></h1>
+        <h2>Record List</h2>
+        <% if(tests.length>0){ %>
+        <table class="list-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0;i<tests.length;i++) { %>
+                <tr>
+                    <td><a href="/tests/show/<%= tests[i] %>"><%= tests[i].name %></a></td>
+                    <td><%= tests[i].course %></td>
+                </tr>    
+                 <% } %>
+            </tbody>
+        </table>
+        <% } % >
+        <div> no record found</div>
+         <%} %>
+    </div>
+</body>
+</html>

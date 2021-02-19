@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Test Data</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><a href="/tests"></a></h1>
+        <h1>Show Test Data</h1>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>:</td>
+                <td><%= test.address %></td>
+              </tr>
+              <tr>
+                <td>Course</td>
+                <td>:</td>
+                <td><%= test.course %></td>
+              </tr>
+              <tr>
+                <td>Phone Number</td>
+                <td>:</td>
+                <td><%= test.phoneno %></td>
+              </tr>
+        </table>
+        <h1><a href="/tests/seacrh/<%= test._id%>">Search Box</a></h1>
+    </div>
+</body>
+</html>

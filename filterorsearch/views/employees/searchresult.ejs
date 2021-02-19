@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Search result</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><a href="/employees/index">Go to home</a></h1>
+        <form action="/employees/show" method="get">
+        <table>
+         <tbody>
+             <tr>
+                 <td>filter area</td>
+                 <td><input type="text" name="department" value="<%= employee.department %>"/></td>
+             </tr>
+         </tbody>
+        </table>
+    </form>
+        <div>No result found</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>student Detail</title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/students">student List</a></h3>
+      <h1>student Detail</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><%= student.name %></td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>:</td>
+            <td><%= student.address %></td>
+          </tr>
+          <tr>
+            <td>standard</td>
+            <td>:</td>
+            <td><%= student.standard %></td>
+          </tr>
+          <tr>
+            <td>Father Name</td>
+            <td>:</td>
+            <td><%= student.fathername %>/year</td>
+          </tr>
+          <tr>
+              <td>Phone Number</td>
+              <td>:</td>
+              <td><%= student.phoneno %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/students/edit/<%= student._id%>">EDIT</a></h3>
+      <form action="/students/delete/<%= student._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee Record</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h3><a href="/employees">Edit Employee Record</a></h3>
+        <h1>Edit Employee Record</h1>
+        <form action="/employees/update/<%= employee._id %>" method="post">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name"required value="<%= employee.name%>"/></td>
+            </tr>
+            <tr>
+                <td>Department</td>
+                <td><input type="text" name="department" required value="<%= employee.department %>"/></td>
+            </tr>
+            <tr>
+                <td>Position</td>
+                <td><input type="text" name="position"required value="<%= employee.position %>"/></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="number" name="phoneno"required value="<%= employee.phoneno %>"/></td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td><input type="number" name="salary"required value="<%=employee.salary %>"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Update Data</button></td>
+            </tr>
+        </table>
+        </form>
+    </div>    
+</body>
+</html>
